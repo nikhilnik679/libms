@@ -1,4 +1,5 @@
 <?php
+namespace App\Controller;
 use App\Entity\Book;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -13,11 +14,11 @@ use Symfony\Bundle\FrameworkExtraBundle\Controller\Controller;
 class BookController extends AbstractController{
 
     /**
-     * @Route("/")
+     * @Route("/Book")
      */
     public function homepageBook()
     {
    
-        return $this->render('view_book.html.twig');
+        return $this->render('Book\view_book.html.twig');
     }
 }

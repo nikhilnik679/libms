@@ -1,4 +1,5 @@
 <?php
+namespace App\Controller;
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,10 +11,10 @@ use Symfony\Bundle\FrameworkExtraBundle\Controller\Controller;
 class UserController extends AbstractController{
 
     /**
-     * @Route("/")
+     * @Route("/User")
      */
     public function homepageUser()
     {
-        return $this->render('view_user.html.twig');
+        return $this->render('User\view_user.html.twig');
     }
 }
