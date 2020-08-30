@@ -8,17 +8,17 @@ use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkExtraBundle\Controller\Controller;
 
-   // $book = ['Book 1', 'Book2'];
 
-        // return $this->render('Book/view_book.html.twig', array('book' => $book));
 class BookController extends AbstractController{
 
     /**
-     * @Route("/Book")
+     * @Route("/Book", name="books_data")
+     *
      */
     public function homepageBook()
     {
-   
-        return $this->render('Book\view_book.html.twig');
+        $book_list= $this->getDoctrine()->getRepository(Book::class)->findAll();
+
+        return $this->render('Book/view_book.html.twig', array('book_list' => $book_list));
     }
 }

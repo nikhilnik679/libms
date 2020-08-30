@@ -3,42 +3,26 @@
 {% block title %} Books {% endblock %}
 
 {% block body %}
-
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Type</th>
-      <th scope="col">Column heading</th>
-      <th scope="col">Column heading</th>
-      <th scope="col">Column heading</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="table-active">
-      <th scope="row">Active</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-  
-  </tbody>
-</table> 
-    {# {% if book %}
-    <table id="book" class="table table-striped">
+  {% if book_list %}
+    <table id="book_list" class="table table-striped">
       <thead>
         <tr>
           <th>Book Title</th>
+          <th>Book Author</th>
+          <th>Book Department</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        {% for item in book %}
+        {% for Book in book_list %}
           <tr>
-            <td>{{ book.title }}</td>
+            <td>{{ Book.title }}</td>
+            <td>{{ Book.author }}</td>
+            <td>{{ Book.department }}</td>
             <td>
-              <a href="/book/{{ book.id }}" class="btn btn-dark">Show</a>
-              <a href="/book/edit/{{ book.id }}" class="btn btn-light">Edit</a>
-              <a href="#" class="btn btn-danger delete-book" data-id="{{ book.id }}">Delete</a>
+              <a href="/Book/{{ Book.id }}" class="btn btn-dark">Show</a>
+              <a href="/Book/edit/{{ Book.id }}" class="btn btn-light">Edit</a>
+              <a href="#" class="btn btn-danger delete-Book" data-id="{{ Book.id }}">Delete</a>
             </td>
           </tr>
         {% endfor %}
@@ -46,9 +30,10 @@
     </table>
   {% else %}
     <p>No books to display</p>
-  {% endif %} #}
+  {% endif %}
 {% endblock %}
 
 {% block javascripts %}
   <script src="/js/main.js"></script>
 {% endblock %}
+

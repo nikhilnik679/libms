@@ -1,0 +1,54 @@
+{# {% for data in all_books %} 
+{{ data }} 
+{% endfor %} #}
+   
+{# <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Column heading</th>
+      <th scope="col">Column heading</th>
+      <th scope="col">Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-active">
+      <th scope="row">Active</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+  
+  </tbody>
+</table> 
+    {# 
+    
+  {% if book %}
+    <table id="book" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Book Title</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in book %}
+          <tr>
+            <td>{{ book.title }}</td>
+            <td>
+              <a href="/book/{{ book.id }}" class="btn btn-dark">Show</a>
+              <a href="/book/edit/{{ book.id }}" class="btn btn-light">Edit</a>
+              <a href="#" class="btn btn-danger delete-book" data-id="{{ book.id }}">Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No books to display</p>
+  {% endif %} 
+{% endblock %}
+
+{% block javascripts %}
+  <script src="/js/main.js"></script>
+{% endblock %}

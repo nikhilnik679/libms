@@ -2,6 +2,39 @@
 
 {% block title %} Library management system {% endblock %}
 
+
 {% block body %}
-   
+  {% if user_list %}
+    <table id="user_list" class="table table-striped">
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>User Password</th>
+          <th>User Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for User in user_list %}
+          <tr>
+            <td>{{ User.username }}</td>
+            <td>{{ User.password }}</td>
+            <td>{{ User.role }}</td>
+            <td>
+              <a href="/User/{{ User.id }}" class="btn btn-dark">Show</a>
+              <a href="/User/edit/{{ User.id }}" class="btn btn-light">Edit</a>
+              <a href="#" class="btn btn-danger delete-User" data-id="{{ User.id }}">Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No Users to display</p>
+  {% endif %}
 {% endblock %}
+
+{% block javascripts %}
+  <script src="/js/main.js"></script>
+{% endblock %}
+

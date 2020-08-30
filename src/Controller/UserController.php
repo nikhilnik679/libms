@@ -11,10 +11,11 @@ use Symfony\Bundle\FrameworkExtraBundle\Controller\Controller;
 class UserController extends AbstractController{
 
     /**
-     * @Route("/User")
+     * @Route("/User", name="users_data")
      */
     public function homepageUser()
     {
-        return $this->render('User\view_user.html.twig');
+        $user_list= $this->getDoctrine()->getRepository(User::class)->findAll();
+        return $this->render('User/view_user.html.twig', array('user_list' => $user_list));
     }
 }
