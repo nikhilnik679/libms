@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Entity;
-
 use App\Repository\BookRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -47,13 +45,11 @@ class Book
 
     /**
      * Set the value of title
-     *
      * @return  self
      */ 
     public function setTitle($title)
     {
         $this->title = $title;
-
         return $this;
     }
 
@@ -67,13 +63,11 @@ class Book
 
     /**
      * Set the value of department
-     *
      * @return  self
      */ 
     public function setDepartment($department)
     {
         $this->department = $department;
-
         return $this;
     }
 
@@ -87,13 +81,11 @@ class Book
 
     /**
      * Set the value of author
-     *
      * @return  self
      */ 
     public function setAuthor($author)
     {
         $this->author = $author;
-
         return $this;
     }
 }
