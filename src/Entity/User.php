@@ -4,11 +4,11 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -22,11 +22,11 @@ class User
         return $this->id;
     }
     /**
-     * @ORM\Column(type="text", length=10)
+     * @ORM\Column(type="text", length=10, unique=true)
      */
     private $username;
     /**
-     * @ORM\Column(type="text",length=12)
+     * @ORM\Column(type="text",length=12, unique=true)
      */
     private $password;
     /**
@@ -94,4 +94,20 @@ class User
 
         return $this;
     }
+
+    public function getRoles()
+    {
+    
+    }
+
+    public function getSalt()
+    {
+        
+    }
+
+    public function eraseCredentials()
+    {
+        
+    }
+   
 }

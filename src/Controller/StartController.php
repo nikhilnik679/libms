@@ -11,14 +11,28 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 use Symfony\Component\Form\Extension\Core\Type\Boolean;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class StartController extends AbstractController {
     /**
-     * @Route("/")
+     * @Route("/", name="login")
      */
-    public function homepage()
+    public function login( Request $request, AuthenticationUtils $utils)
     {
-             return $this->render('index.html.twig');
+        $error = $utils->getLastAuthenticationError();
+        $lastUsername = $utils->getLastUsername();
+
+        return $this->render('login.html.twig', [
+            'error' => $error,
+            'lastUsername' => $lastUsername
+        ]);
+    }
+
+    /**
+     * @Route("/logout", name="logout")
+     */
+    public function logout()
+    {
+        throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
 }
