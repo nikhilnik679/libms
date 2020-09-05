@@ -7,6 +7,6 @@
 /public/bundles/
 /var/
 /vendor/
-/.vscode/
-/.idea/
+.vscode
+.idea
 ###< symfony/framework-bundle ###
