@@ -3,10 +3,21 @@
 {% block title %} Library management system {% endblock %}
 
 {% block body %}
-   <h1>LOGIN</h1>
-   <form action="{{ path('login') }}" method="POST">
-   
- 
+<style>
+
+      .error {
+          color: red;
+      }
+
+</style>
+
+<h3>LOGIN</h3></br>
+  <div class="row justify-content-center">
+    <div class="col-4">
+    {% if error %}
+        <span class="error"> {{ error.messageKey }}</span>
+    {% endif %}
+   <form action="{ path('login') }}" method="POST">
     <div class="form-group">
       <label for="Username">Username</label>
       <input type="text" name="_username" value="{{ lastUsername }}" class="form-control" placeholder="Enter Username">
@@ -26,4 +37,6 @@
    
    
    </form>
+   </div>
+   </div>
 {% endblock %}
