@@ -1,6 +1,19 @@
-//alert("welcome");
 
+if (window.location.pathname=='/index') {
+    
+    window.onload = function () {
+        if (!('hasCodeRunBefore' in localStorage)) {
+            $("#welcomeMsg").modal('toggle');
+           // alert("Thank you xyz \n for coming to our site");
+            localStorage.setItem("hasCodeRunBefore", true);
+       }
+    }
+      
+       
+  
+}
 
+//alert("Hello world");
 
 
 // const book = document.getElementById('book_list');

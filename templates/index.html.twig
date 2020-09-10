@@ -3,5 +3,24 @@
 {% block title %} Library management system {% endblock %}
 
 {% block body %}
+
+ <div class="modal" id="welcomeMsg">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>Thank you  {{ app.user.getFirstName }}  <br/> for coming to our site</h3>
+      </div>
+     
+    </div>
+  </div>
+
+
+
    <h1>index</h1>
 {% endblock %}
