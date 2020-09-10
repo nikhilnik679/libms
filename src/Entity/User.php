@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+
 /**
- * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
-class User implements UserInterface, \Serializable
+class User implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -16,59 +16,116 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="integer")
      */
     private $id;
+    
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="first_name", type="string", length=255, nullable=true)
+     */
+    private $firstName;
+    
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="last_name", type="string", length=255, nullable=true)
+     */
+    private $lastName;
+
+    /**
+     * @ORM\Column(type="string", length=180, unique=true)
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = [];
+
+    /**
+     * @var string The hashed password
+     * @ORM\Column(type="string")
+     */
+    private $password;
 
     public function getId(): ?int
     {
         return $this->id;
     }
-    /**
-     * @ORM\Column(type="text", length=10, unique=true)
-     */
-    private $username;
-    /**
-     * @ORM\Column(type="text",length=12, unique=true)
-     */
-    private $password;
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $role;
-
-
-    /**
-     * Get the value of username
-     */ 
-    public function getUsername()
+    
+    public function getFirstName(): ?string
     {
-        return $this->username;
+        return $this->firstName;
     }
 
-    /**
-     * Set the value of username
-     *
-     * @return  self
-     */ 
-    public function setUsername($username)
+    public function setFirstName(?string $name): self
     {
-        $this->username = $username;
+        $this->firstName = $name;
+
+        return $this;
+    }
+    
+    public function getLastName(): ?string
+    {
+        return $this->lastName;
+    }
+
+    public function setLastName(?string $name): self
+    {
+        $this->lastName = $name;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
 
         return $this;
     }
 
     /**
-     * Get the value of password
-     */ 
-    public function getPassword()
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUsername(): string
     {
-        return $this->password;
+        return (string) $this->email;
     }
 
     /**
-     * Set the value of password
-     *
-     * @return  self
-     */ 
-    public function setPassword($password)
+     * @see UserInterface
+     */
+    public function getRoles(): array
+    {
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+
+        return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getPassword(): string
+    {
+        return (string) $this->password;
+    }
+
+    public function setPassword(string $password): self
     {
         $this->password = $password;
 
@@ -76,57 +133,19 @@ class User implements UserInterface, \Serializable
     }
 
     /**
-     * Get the value of role
-     */ 
-    public function getRole()
+     * @see UserInterface
+     */
+    public function getSalt()
     {
-        return $this->role;
+        // not needed when using the "auto" algorithm in security.yaml
     }
 
     /**
-     * Set the value of role
-     *
-     * @return  self
-     */ 
-    public function setRole($role)
-    {
-        $this->role = $role;
-
-        return $this;
-    }
-
-    public function getRoles()
-    {
-    
-    }
-
-    public function getSalt()
-    {
-        
-    }
-
+     * @see UserInterface
+     */
     public function eraseCredentials()
     {
-        
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
     }
-
-    public function serialize()
-    {
-        return serialize([
-            $this->id,
-            $this->username,
-            $this->password
-        ]);
-    }
-
-    public function unserialize($string)
-    {
-        list( 
-        $this->id,
-        $this->username,
-        $this->password
-        )  = unserialize($string, ['allowed_classes' => false]);
-    }
-
-     
 }

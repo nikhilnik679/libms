@@ -16,37 +16,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 class StartController extends AbstractController {
  
-    // /**
-    //  * @Route("/")
-    //  */
-    // public function index(){
-
-       
-    //     return $this->render('security/login.html.twig');
-
-    // }
-
-
     /**
-     * @Route("login", name="login")
-     * 
+     * @Route("/index", name="homepage")
      */
-    public function login( Request $request, AuthenticationUtils $utils)
-    {
-        $error = $utils->getLastAuthenticationError();
-        $lastUsername = $utils->getLastUsername();
+    public function index(){
 
-        return $this->render('login.html.twig', [
-            'error' => $error,
-            'lastUsername' => $lastUsername
-        ]);
+        return $this->render('index.html.twig');
+
     }
-
-    // /**
-    //  * @Route("/logout", name="logout")
-    //  */
-    // public function logout()
-    // {
-    //     throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
-    // }
 }

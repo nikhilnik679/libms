@@ -35,7 +35,7 @@ class BookController extends AbstractController{
         $response->send();
     }
     /**
-     * @Route("/Book/add")
+     * @Route("/Book/add", name="add_book")
      */
     public function addBook(Request $request){
        $book = new Book();     

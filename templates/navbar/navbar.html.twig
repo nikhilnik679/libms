@@ -8,16 +8,19 @@
   <div class="collapse navbar-collapse" id="mobile-nav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a href="/" class="nav-link">Home</a>
+        <a href="/Book" class="nav-link">Home</a>
       </li>
       <li class="nav-item">
         <a href="/Book" class="nav-link">Books</a>
       </li>
-        <li class="nav-item">
+        {# <li class="nav-item">
         <a href="/User" class="nav-link">Users</a>
+      </li> #}
+      <li class="nav-item">
+        <a href="/register" class="nav-link">Register</a>
       </li>
        <li class="nav-item">
-        <a href="/User" class="nav-link">Logout</a>
+        <a href="{{ path('app_logout') }}" class="nav-link">Logout</a>
       </li>
     </ul>
   </div>
