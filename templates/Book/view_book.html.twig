@@ -1,84 +1,59 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Books {% endblock %}
-
-{% block body %}
-{% if book_list %}
-<div class="grid-container">
- {% for book in book_list %}
-
-  <div class="grid-item">  
-          {# <div class="card text-white bg-dark mb-3" style="max-width: 40rem;">
-          <div class="card-header">{{ book.title }}</div>
-          <div class="card-body">
-            <h4 class="card-title">{{ book.author }}</h4>
-            <p class="card-text">{{ book.department }}</p>
-          </div>
-         </div> #}
-
-
-       <div class="card border-dark  mb-3" style="max-width: 40rem;">
-          <div class="card-header">{{ book.title }}</div>
-          <div class="card-body">
-            <h4 class="card-title">{{ book.author }}</h4>
-            <p class="card-text">{{ book.department }}</p>
-            <button id="show_book_details" type="button" class="btn btn-info">Info</button>
-          </div>
-       </div>
-
-
-   
-
-
-
-
-
-
-  </div>
-  {# <div class="grid-item">2</div>
-  <div class="grid-item">3</div>   #}
-  {# <div class="grid-item">4</div>
-  <div class="grid-item">5</div>
-  <div class="grid-item">6</div>  
-  <div class="grid-item">7</div>
-  <div class="grid-item">8</div>
-  <div class="grid-item">9</div>   #}
-
- {% endfor %}
- </div>
-{% else %}
-    <p>No books to display</p>
-{% endif %}
-
-  {# {% if book_list %}
-    <table id="book_list" class="table table-striped">
-      <thead>
-        <tr>
-          <th>Book Title</th>
-          <th>Book Author</th>
-          <th>Book Department</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for book in book_list %}
-          <tr>
-            <td>{{ book.title }}</td>
-            <td>{{ book.author }}</td>
-            <td>{{ book.department }}</td>
-            <td>
-              <a href="/Book/add/" class="btn btn-dark">Add</a>
-              <a href="/Book/edit/{{ book.id }}" class="btn btn-info">Edit</a>
-              <a href="#" class="btn btn-danger delete-book" data-id="{{ book.id }}">Delete</a>
-            </td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  {% else %}
-    <p>No books to display</p>
-  {% endif %} #}
+{% block title %}
+	Books
 {% endblock %}
 
+{% block body %}
+
+	{# <p> {{ dump(book_list) }} </p>  #}
 
 
+	{% if book_list %}
+
+		<div class="grid-container">
+			{% for book in book_list %}
+				<div class="grid-item">
+					<div class="card border-dark  mb-3" style="max-width: 40rem;">
+						<div class="card-header">{{ book.title }}</div>
+						<div class="card-body">
+							<h4 class="card-title">{{ book.author }}</h4>
+							<p class="card-text">{{ book.department }}</p>
+							<button type="button" class="btn btn-info show_book_details" data-book-id="{{ book|json_encode() }}">Info</button>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	{% else %}
+		<p>No books to display</p>
+	{% endif %}
+
+	{# book details modal start #}
+
+	<div class="modal text-center">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">
+						<span class="bookTitle">
+							Book title
+						</span>
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<h5 class="bookAuthor text-primary">Book Author</h5>
+					<h5 class="bookDepartment text-primary">Book Department</h5>
+				</div>
+				<div class="modal-footer">
+
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

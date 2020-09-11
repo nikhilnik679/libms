@@ -16,14 +16,14 @@ class User implements UserInterface
      * @ORM\Column(type="integer")
      */
     private $id;
-    
+
     /**
      * @var string|null
      *
      * @ORM\Column(name="first_name", type="string", length=255, nullable=true)
      */
     private $firstName;
-    
+
     /**
      * @var string|null
      *
@@ -51,7 +51,7 @@ class User implements UserInterface
     {
         return $this->id;
     }
-    
+
     public function getFirstName(): ?string
     {
         return $this->firstName;
@@ -63,7 +63,7 @@ class User implements UserInterface
 
         return $this;
     }
-    
+
     public function getLastName(): ?string
     {
         return $this->lastName;
