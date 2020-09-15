@@ -1,0 +1,66 @@
+
+/* define primary colors */
+$myFont: "Inter", sans-serif;
+$primary_black: red;
+$primary_white: white;
+
+
+
+body {
+  font-family: $myFont;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+/* Navbar start*/
+
+.navbar{
+  
+}
+
+.navbar li{
+  float: right;
+  list-style: none;
+}
+
+.navbar ul{
+  background-color: $primary_black;
+  overflow: auto;
+  margin: 0px;
+  padding: 1.5em;
+}
+
+.navbar li a{
+  text-decoration: none;
+  color: $primary_white;
+  padding: 1.5em  1.5em ;
+}
+
+.navbar li a:hover{
+  color: $primary_black;
+  background-color: $primary_white;
+}
+
+/* Navbar end*/
+
+
+/* Book main page start*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.show_book_details {
+  float: right;
+}
+
+/* Book main page end*/
+

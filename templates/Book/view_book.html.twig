@@ -19,7 +19,7 @@
 						<div class="card-body">
 							<h4 class="card-title">{{ book.author }}</h4>
 							<p class="card-text">{{ book.department }}</p>
-							<button type="button" class="btn btn-info show_book_details" data-book-id="{{ book|json_encode() }}">Info</button>
+							<button type="button"  data-book-id="{{ book|json_encode() }}">Info</button>
 						</div>
 					</div>
 				</div>
@@ -45,12 +45,12 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<h5 class="bookAuthor text-primary">Book Author</h5>
-					<h5 class="bookDepartment text-primary">Book Department</h5>
+					<h5 class="bookAuthor">Book Author</h5>
+					<h5 class="bookDepartment ">Book Department</h5>
 				</div>
 				<div class="modal-footer">
 
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" >Close</button>
 				</div>
 			</div>
 		</div>

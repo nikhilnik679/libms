@@ -1,0 +1,53 @@
+/* define primary colors */
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Navbar start*/
+.navbar li {
+  float: right;
+  list-style: none;
+}
+
+.navbar ul {
+  background-color: red;
+  overflow: auto;
+  margin: 0px;
+  padding: 1.5em;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  padding: 1.5em  1.5em;
+}
+
+.navbar li a:hover {
+  color: red;
+  background-color: white;
+}
+
+/* Navbar end*/
+/* Book main page start*/
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.show_book_details {
+  float: right;
+}
+
+/* Book main page end*/
+/*# sourceMappingURL=main.css.map */
