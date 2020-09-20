@@ -11,7 +11,14 @@ class AppFixtures extends Fixture
     {
         // $product = new Product();
         // $manager->persist($product);
+        $manager->persist($user);
 
+        $admin = new User();
+        $admin->setUsername('n@gmail.com');
+        $admin->setPassword($this->encodePassword($admin, 'n'));
+        $admin->setRoles(array('ROLE_ADMIN'));
+        $manager->persist($admin);
+    
         $manager->flush();
     }
 }

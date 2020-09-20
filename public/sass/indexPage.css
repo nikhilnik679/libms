@@ -188,14 +188,117 @@ a.close:hover {
 /* VIEW BOOK PAGE END*/
 /* REGISTER USER START*/
 .register-user {
-  margin-top: 100px;
+  margin: 100px;
   text-align: center;
 }
 
 .register-user .register-user-form {
   border: 1px solid black;
-  padding: 15px;
-  margin: auto;
-  width: 30%;
+  padding: 50px;
+  margin: 15px;
 }
-/*# sourceMappingURL=main.css.map */
+
+.intro img {
+  width: 100%;
+  height: 600px;
+}
+
+.features-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  padding: 10px;
+  grid-gap: 25px;
+}
+
+.features-box {
+  background-color: #fafafa;
+  padding: 30px;
+  margin-bottom: 30px;
+  float: left;
+  text-align: center;
+  min-height: 280px;
+  border: 5px;
+  border-color: #333;
+}
+
+.features-box-heading {
+  text-align: center;
+}
+
+.more-features {
+  background-image: url("/media/laptop-background.png");
+  background-repeat: no-repeat;
+}
+
+.more-features .more-features-block {
+  background-color: wheat;
+}
+
+.brands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  margin: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+}
+
+.brands img {
+  width: 150px;
+  height: 150px;
+  margin: 25px 50px;
+}
+
+.comparision {
+  background-color: orange;
+  height: 150px;
+  margin: 25px;
+}
+
+.pricing {
+  background-color: green;
+  height: 150px;
+  margin: 25px;
+}
+
+footer .big-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f2f5f8;
+  padding: 2.5em 0 0 0;
+}
+
+footer .big-footer .bf-block-1 {
+  color: #787f8c;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+footer .small-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #dee4ea;
+  color: #787f8c;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+}
+
+footer .small-footer .block-1 {
+  margin: 15px;
+}
+/*# sourceMappingURL=indexPage.css.map */

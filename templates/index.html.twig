@@ -4,27 +4,152 @@
 	Library management system
 {% endblock %}
 
+  
+    {% block stylesheets %}
+       <link rel="stylesheet" href="sass/indexPage.css">       
+    {% endblock %}
+
 {% block body %}
+    <section class="intro">
+        
+            <img src="/media/image-1.jpg"> 
+            {# <img src="/media/image-2.jpg">      
+            <img src="/media/image-3.jpg">      
+            <img src="/media/image-4.jpg"> #}
+         
+    </section>
 
-	<div class="modal" id="welcomeMsg">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
+    <section class="features">
+            <div class="features-box-heading">
+                    <h2>Features that help you grow</h2>
+                    <p class="text-center">Powerful and intuitive features to make your Sales, Marketing, Customer Success teams more productive and effective.</p>
+            </div>
 
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<h3>Thank you
-						{{ app.user.getFirstName }}
-						<br/>
-						for coming to our site</h3>
-				</div>
+            <div class="features-grid">
+                    <div class="features-box">
+                        <div class="box">
+                        <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+                            <h3>Visual Sales Funnel</h3>
+                            <p>Unique to SalesSeek and better than a Kanban card, get Deal value, activity, and momentum in a single glance</p>
+                        </div>
+                    </div>
 
-			</div>
-		</div>
+                    <div class="features-box">
+                        <div class="box">
+                        <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+                            <h3>Visual Sales Funnel</h3>
+                            <p>Unique to SalesSeek and better than a Kanban card, get Deal value, activity, and momentum in a single glance</p>
+                        </div>
+                    </div>
+
+                    <div class="features-box">
+                        <div class="box">
+                        <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+                            <h3>Visual Sales Funnel</h3>
+                            <p>Unique to SalesSeek and better than a Kanban card, get Deal value, activity, and momentum in a single glance</p>
+                        </div>
+                    </div>
+
+                    <div class="features-box">
+                        <div class="box">
+                        <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+                            <h3>Visual Sales Funnel</h3>
+                            <p>Unique to SalesSeek and better than a Kanban card, get Deal value, activity, and momentum in a single glance</p>
+                        </div>
+                    </div>
+
+                    <div class="features-box">
+                        <div class="box">
+                        <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+                            <h3>Visual Sales Funnel</h3>
+                            <p>Unique to SalesSeek and better than a Kanban card, get Deal value, activity, and momentum in a single glance</p>
+                        </div>
+                    </div>
+
+                    <div class="features-box">
+                        <div class="box">
+                        <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+                            <h3>Visual Sales Funnel</h3>
+                            <p>Unique to SalesSeek and better than a Kanban card, get Deal value, activity, and momentum in a single glance</p>
+                        </div>
+                    </div>
+
+                    <div class="features-box">
+                        <div class="box">
+                        <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+                            <h3>Visual Sales Funnel</h3>
+                            <p>Unique to SalesSeek and better than a Kanban card, get Deal value, activity, and momentum in a single glance</p>
+                        </div>
+                    </div>
+
+                    <div class="features-box">
+                        <div class="box">
+                        <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+                            <h3>Visual Sales Funnel</h3>
+                            <p>Unique to SalesSeek and better than a Kanban card, get Deal value, activity, and momentum in a single glance</p>
+                        </div>
+                    </div>
+
+                    <div class="features-box">
+                        <div class="box">
+                        <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+                            <h3>Visual Sales Funnel</h3>
+                            <p>Unique to SalesSeek and better than a Kanban card, get Deal value, activity, and momentum in a single glance</p>
+                        </div>
+                    </div>
+            </div>
+    </section>
+
+    <section class="more-features">
+    
+    <div class="more-features-block">
+    <div>
+    
+    </section>
+
+    <section class="brands">
+            <img src="/media/logos/logo-image-1.jpg"> 
+            <img src="/media/logos/logo-image-2.png"> 
+            <img src="/media/logos/logo-image-3.png">
+            <img src="/media/logos/logo-image-4.png"> 
+            <img src="/media/logos/logo-image-5.jpeg"> 
+            <img src="/media/logos/logo-image-6.jpg"> 
+    </section>
+
+    <section class="comparision">
+    
+    </section>
+
+    <section class="pricing">
+    
+    </section>
 
 
-		<h1>index</h1>
-	{% endblock %}
+    <footer class="footer">
+    
+        <div class="big-footer">
+
+            <div class="bf-block-1"> block </div>
+            <div class="bf-block-1"> block </div>
+            <div class="bf-block-1"> block </div>
+            <div class="bf-block-1"> block </div>
+            <div class="bf-block-1"> block </div>
+
+        </div>
+
+        <div class="small-footer">
+
+            <div class="block-1"> block </div>
+            <div class="block-1"> block </div>
+            <div class="block-1"> block</div>
+    </div>
+    </footer>
+ 
+
+{% endblock %}
+
+
+{% block slide_js_css_cdn %}
+           
+                            
+{% endblock  slide_js_css_cdn %}

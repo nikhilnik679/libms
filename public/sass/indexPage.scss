@@ -1,0 +1,122 @@
+@import "main";
+
+
+.intro{
+    //background-color: aqua;
+    // height: 250px;
+    // width: 98%;
+    // border: 1px solid black;
+    // margin-top: 25px;
+
+    img{
+        width: 100%;
+        height: 600px;
+    }
+    
+}
+
+.features-grid{
+   display: grid;
+   grid-template-columns: auto auto auto; 
+   padding: 10px;
+   grid-gap: 25px;
+ }
+
+ .features-box{
+    background-color: #fafafa;
+    padding: 30px;
+    margin-bottom: 30px;
+    float: left;
+    text-align: center;
+    min-height: 280px;
+    border: 5px;
+    border-color: #333;
+ 
+}
+
+.features-box-heading{
+    text-align: center;
+}
+
+.more-features{
+    background-image:url("/media/laptop-background.png");
+    background-repeat: no-repeat;
+
+    .more-features-block{
+        background-color: wheat;
+    }
+}
+
+
+
+
+
+
+
+.brands{
+    display: flex;
+    padding: 15px;
+    margin: 50px;
+    justify-content: center;
+    align-items: right;
+
+    img{
+        width: 150px;
+        height: 150px;
+        margin: 25px 50px;
+        
+    }
+}
+
+.comparision{
+    background-color:orange;
+    height: 150px;
+    margin: 25px;
+}
+
+.pricing{
+    background-color: green;
+    height: 150px;
+   
+    margin: 25px;
+}
+
+footer{
+    // background-color: orange;
+    // height: 250px;
+    // width: 98%;
+    // border: 1px solid black;
+
+
+    .big-footer{
+        display: flex;
+        background-color: #f2f5f8;
+        padding: 2.5em 0 0 0;
+        
+
+        .bf-block-1{
+            color: #787f8c;
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    
+    }
+    
+
+    .small-footer{
+        display: flex;
+        background-color: #dee4ea;
+        color: #787f8c;
+        // padding: 10px 20px 10px 20px;
+        justify-content: center;
+        align-items: right;
+       
+            .block-1{
+                
+                margin: 15px;
+            }
+    }
+
+}

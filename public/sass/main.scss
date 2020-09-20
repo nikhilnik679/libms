@@ -1,66 +1,230 @@
 
-/* define primary colors */
 $myFont: "Inter", sans-serif;
-$primary_black: red;
+$primary_black: black;
 $primary_white: white;
+$length_0_px: 0px;
+$length_10_px: 10px;
+$length_15_px: 15px;
+$length_20_px: 20px;
+$length_25_px: 25px;
+$length_50_px: 50px;
+$length_75_px: 75px;
+$length_100_px: 100px;
 
 
 
 body {
   font-family: $myFont;
-  margin: 0px;
-  padding: 0px;
+  margin: $length_0_px;
+  padding: $length_0_px;
+  //background-color: plum;
 }
 
 
 
 /* Navbar start*/
-
 .navbar{
-  
-}
-
-.navbar li{
-  float: right;
-  list-style: none;
-}
-
-.navbar ul{
+  overflow: hidden;
   background-color: $primary_black;
-  overflow: auto;
-  margin: 0px;
-  padding: 1.5em;
-}
+  position: fixed;
+  top: 0;
+  width: 100%;
+ 
 
-.navbar li a{
-  text-decoration: none;
-  color: $primary_white;
-  padding: 1.5em  1.5em ;
-}
+    li{
+      float: right;
+      list-style: none;
+    }
 
-.navbar li a:hover{
-  color: $primary_black;
-  background-color: $primary_white;
-}
+    ul{
+     
+      overflow: hidden;
+      margin: $length_0_px;
+      padding: $length_0_px;
+    }
 
+      a{
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      color: $primary_white;
+      padding: 1.5em  1.5em ;
+    }
+
+      a:hover{
+      color: $primary_black;
+      background-color: $primary_white;
+    }
+}
 /* Navbar end*/
 
+/* VIEW BOOK PAGE START*/
 
-/* Book main page start*/
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 10px;
-}
+  grid-gap: 30px;
+  margin-top:100px;
+  margin-left:  100px;
+  margin-right: 100px;
+
 .grid-item {
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  border: solid 1px $primary_black;
+  background-color: burlywood;
 }
+}
+
+
+
+
 
 .show_book_details {
   float: right;
+  background-color: #00bfff; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px; 
 }
 
 /* Book main page end*/
 
+/* LOGIN PAGE START*/
+
+
+.sign-in-btn{
+  background-color: #00bfff; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px; 
+}
+
+.login-form{
+  width: 500px;
+	padding: 30px;
+	background: #FFFFFF;
+  margin: 50px auto;
+  text-align: center;
+  border: solid 3px $primary_black;
+
+  h2{
+        background: $primary_black;
+        text-transform: uppercase;
+        color: $primary_white;
+        font-size: 24px;
+        font-weight: 400;
+        padding: 20px;
+        margin: -30px -30px 30px -30px;
+  }
+
+  .login-form-field{
+          display: block;
+          width: 80%;
+          padding: 10px 30px 10px 30px;
+          margin: 10px 20px 10px 20px;
+          border: none;
+          border-bottom: 2px solid #ddd;
+          background: transparent;
+          height: 25px;
+          text-align: center;
+  }
+}
+
+
+
+/* LOGIN PAGE END*/
+
+
+
+.modal-box {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 98%;
+  background: white;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+}
+
+.modal-box header,
+.modal-box .modal-header {
+  padding: 1.25em 1.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-box header h3,
+.modal-box header h4,
+.modal-box .modal-header h3,
+.modal-box .modal-header h4 { margin: 0; }
+
+.modal-box .modal-body { padding: 2em 1.5em; }
+
+.modal-box footer,
+.modal-box .modal-footer {
+  padding: 1em;
+  border-top: 1px solid #ddd;
+  background: rgba(0, 0, 0, 0.02);
+  text-align: right;
+}
+
+.modal-overlay {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+a.close {
+  line-height: 1;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  text-decoration: none;
+  color: #bbb;
+}
+
+a.close:hover {
+  color: #222;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+
+/* VIEW BOOK PAGE END*/
+
+
+/* REGISTER USER START*/
+.register-user{
+    margin-top: 100px;
+    text-align: center;
+    
+    .register-user-form{
+      border: 1px solid black;
+      padding: 15px;
+      margin: auto;
+      width: 30%;
+    }
+}

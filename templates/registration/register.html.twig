@@ -1,34 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register
-{% endblock %}
+{% block title %} Register {% endblock %}
 
 {% block body %}
-	<div class="container text-center pt-3">
-		<h1>Register</h1>
-		<br/>
-		{# If there are any errors on the form, display them #}
-		{% set formErrors = registrationForm.vars.errors.form.getErrors(true) %}
-		{% if formErrors|length %}
-			<div class="alert alert-danger">
-				<ul>
-					{% for error in formErrors %}
-						<li>{{ error.message }}</li>
-					{% endfor %}
-				</ul>
-			</div>
-		{% endif %}
-		<div
-			class="text-center pt-3">
-			{# Render the Form #}
-			{{ form_start(registrationForm) }}
-			{{ form_row(registrationForm.firstName) }}
-			{{ form_row(registrationForm.lastName) }}
-			{{ form_row(registrationForm.email) }}
-			{{ form_row(registrationForm.plainPassword) }}
-		</div>
+	<div class="register-user">
+			<h1>Register New User</h1>
+					{# If there are any errors on the form, display them #}
+					{% set formErrors = registrationForm.vars.errors.form.getErrors(true) %}
+					{% if formErrors|length %}
+						<div>
+							<ul>
+								{% for error in formErrors %}
+									<li>{{ error.message }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					{% endif %}
 
-		<button class="btn">Register</button>
-		{{ form_end(registrationForm) }}
+			<div class="register-user-form">
+				{# Render the Form #}
+				{{ form_start(registrationForm) }}
+				{{ form_row(registrationForm.firstName) }}
+				{{ form_row(registrationForm.lastName) }}
+				{{ form_row(registrationForm.email) }}
+				{{ form_row(registrationForm.plainPassword) }}
+				{{ form_row(registrationForm.roles) }} 
+			    <button>Register</button>
+					{{ form_end(registrationForm) }}
+			</div>
 	</div>
-</div>{% endblock %}
+
+{% endblock %}
