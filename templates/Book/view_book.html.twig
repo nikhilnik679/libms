@@ -32,8 +32,8 @@
 	{% endif %}
 
 	{# book details modal start #}
-
-	<div id="book_details_popup" class="modal-box">
+<div class="book_details_popup">
+	<div class="modal-box">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">	
@@ -42,17 +42,18 @@
 							Book title
 						</span>
 					</h5>	
-					 <a href="#" class="js-modal-close close">×</a>			
+					 <a href="#" class="close"><i class="far fa-times-circle"></i></a>			
 				</div>
 				<div class="modal-body">
 					<h5 class="bookAuthor">Book Author</h5>
 					<h5 class="bookDepartment ">Book Department</h5>
 				</div>
-				<div class="modal-footer">
-				    <a href="#" class="js-modal-close">Close Button</a>
-				</div>
+				{# <div class="modal-footer">
+				 <a href="#" class="close">Close</a> 
+				</div> #}
 			</div>
 		</div>
 	</div>
-
+</div>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 {% endblock %}

@@ -1,0 +1,26 @@
+[
+    {
+        "type": "Directory",
+        "name": "/var/www/html/libms/public",
+        "parent_id": null,
+        "workspaceRoot": "/var/www/html/libms",
+        "workspacePath": "public",
+        "id": "jStnF6My0EkChKQr"
+    },
+    {
+        "type": "Directory",
+        "name": "/var/www/html/libms/src/Controller",
+        "parent_id": null,
+        "workspaceRoot": "/var/www/html/libms",
+        "workspacePath": "src/Controller",
+        "id": "QpJsw0zkPvBtFXhl"
+    },
+    {
+        "type": "Directory",
+        "name": "/var/www/html/libms/templates",
+        "parent_id": null,
+        "workspaceRoot": "/var/www/html/libms",
+        "workspacePath": "templates",
+        "id": "GawWVNeZYOg279I6"
+    }
+]

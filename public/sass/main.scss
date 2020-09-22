@@ -1,4 +1,6 @@
 
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
 $myFont: "Inter", sans-serif;
 $primary_black: black;
 $primary_white: white;
@@ -12,14 +14,12 @@ $length_75_px: 75px;
 $length_100_px: 100px;
 
 
-
 body {
   font-family: $myFont;
   margin: $length_0_px;
   padding: $length_0_px;
   //background-color: plum;
 }
-
 
 
 /* Navbar start*/
@@ -73,14 +73,9 @@ body {
   padding: 20px;
   font-size: 30px;
   text-align: center;
-  border: solid 1px $primary_black;
-  background-color: burlywood;
+  border: solid 1px $primary_black; 
 }
 }
-
-
-
-
 
 .show_book_details {
   float: right;
@@ -94,6 +89,62 @@ body {
   font-size: 16px;
   margin: 4px 2px; 
 }
+
+
+.book_details_popup {
+  background: #00bfff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  &.is-on {
+    opacity: 1;
+    visibility: visible;
+    .modal-box {
+      opacity: 1;
+      visibility: visible;
+      top: 0;
+    }
+  }
+  .modal-box {
+    background: #fff;
+    position: absolute;
+    top: -50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 30px;
+    width: 40%;
+    height: 40%;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.close{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 30px;
+  color:black;
+  cursor: pointer;
+}
+
 
 /* Book main page end*/
 
@@ -113,10 +164,12 @@ body {
 }
 
 .login-form{
+  
   width: 500px;
 	padding: 30px;
 	background: #FFFFFF;
   margin: 50px auto;
+  margin-top: 200px;
   text-align: center;
   border: solid 3px $primary_black;
 
@@ -147,70 +200,6 @@ body {
 
 /* LOGIN PAGE END*/
 
-
-
-.modal-box {
-  display: none;
-  position: absolute;
-  z-index: 1000;
-  width: 98%;
-  background: white;
-  border-bottom: 1px solid #aaa;
-  border-radius: 4px;
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-clip: padding-box;
-}
-
-.modal-box header,
-.modal-box .modal-header {
-  padding: 1.25em 1.5em;
-  border-bottom: 1px solid #ddd;
-}
-
-.modal-box header h3,
-.modal-box header h4,
-.modal-box .modal-header h3,
-.modal-box .modal-header h4 { margin: 0; }
-
-.modal-box .modal-body { padding: 2em 1.5em; }
-
-.modal-box footer,
-.modal-box .modal-footer {
-  padding: 1em;
-  border-top: 1px solid #ddd;
-  background: rgba(0, 0, 0, 0.02);
-  text-align: right;
-}
-
-.modal-overlay {
-  opacity: 0;
-  filter: alpha(opacity=0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 900;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3) !important;
-}
-
-a.close {
-  line-height: 1;
-  font-size: 1.5em;
-  position: absolute;
-  top: 5%;
-  right: 2%;
-  text-decoration: none;
-  color: #bbb;
-}
-
-a.close:hover {
-  color: #222;
-  -webkit-transition: color 1s ease;
-  -moz-transition: color 1s ease;
-  transition: color 1s ease;
-}
 
 
 /* VIEW BOOK PAGE END*/
