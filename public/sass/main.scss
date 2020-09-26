@@ -165,11 +165,11 @@ body {
 
 .login-form{
   
-  width: 500px;
-	padding: 30px;
+  width: 30%;
+	padding: 20px;
 	background: #FFFFFF;
-  margin: 50px auto;
-  margin-top: 200px;
+  margin: 40px auto;
+  margin-top: 150px;
   text-align: center;
   border: solid 3px $primary_black;
 
@@ -179,14 +179,14 @@ body {
         color: $primary_white;
         font-size: 24px;
         font-weight: 400;
-        padding: 20px;
-        margin: -30px -30px 30px -30px;
+        padding: 10px;
+        margin: -20px -20px 20px -20px;
   }
 
   .login-form-field{
           display: block;
           width: 80%;
-          padding: 10px 30px 10px 30px;
+          padding: 10px 20px 10px 20px;
           margin: 10px 20px 10px 20px;
           border: none;
           border-bottom: 2px solid #ddd;
