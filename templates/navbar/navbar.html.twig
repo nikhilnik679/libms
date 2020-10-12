@@ -1,9 +1,14 @@
-<nav class="navbar">
+<nav class="navbar" id="topNav">
   <ul>
     <li><a href="/index">Home</a></li>
     <li><a href="/Book">Books</a></li>
     <li><a href="/register">Register</a></li>
     <li><a href="{{ path('app_logout') }}">Logout</a></li>
-     <li><a href="{{ path('add_book') }}">Add Book</a></li>
+    <li><a href="{{ path('add_book') }}">Add Book</a></li>
+    <li>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </li>
   </ul>
 </nav>
