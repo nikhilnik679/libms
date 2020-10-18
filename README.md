@@ -1,33 +1,48 @@
 ## LIBMS 
 
  A simple library management system, Created 
- keeping in mind to learn frontend and backend 
- technologies by implementing it.
- 
+ keeping in mind to learn front-end and backend 
+ technologies by implementing it.  
 ---
 # Index
   + **Technology Stack** 
-  + **Implementation**
-  + **How to run project** 
+  + **Screenshots**
   + **Needs Improvement**
 
 ## Technology Used
-
 **Frontend** 
 
-    HTML5  CSS3  SASS  GULP  JAVASCRIPT  TWIG
-    
+   * HTML5  
+   * CSS3  
+   * SASS 
+   * Gulp  
+   * Javascript  
+   * TWIG
+
 **Backend**
 
-SYMFONY
-   
+ * PHP
+ * MySql
+ * LAMP
+ * SYMFONY
+
+**Package Manager**
+
+ * npm
+ * composer
+
 **IDE**
-   
-VSCode
-    
+
+* VSCode
+  
 ---
 
-## Implementation
+## Screenshots
 
 ---
+
+## Needs Improvement 
+
+* Tablet Mode UI
+* More Backend Functionality
 
