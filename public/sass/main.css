@@ -6,30 +6,73 @@ body {
 
 /* Navbar start*/
 .navbar {
-  overflow: hidden;
-  background-color: white;
+  display: flex;
   position: fixed;
-  top: 0;
+  align-items: center;
+  background-color: white;
+  color: black;
+  z-index: 1;
   width: 100%;
-  z-index: 5; }
-  .navbar li {
-    float: right;
-    list-style: none; }
-  .navbar ul {
-    overflow: hidden;
-    margin: 0px;
-    padding: 0px; }
-  .navbar a {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    padding: 1.5em  1.5em; }
-  .navbar a:hover {
-    color: white;
-    background-color: red; }
-  .navbar .icon {
-    display: none; }
+  justify-content: space-around; }
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem; }
+
+.navbar-links {
+  height: 100%; }
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0; }
+
+.navbar-links li {
+  list-style: none; }
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 1rem; }
+
+.navbar-links li:hover {
+  background-color: white; }
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px; }
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px; }
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; }
+  .toggle-button {
+    display: flex; }
+  .navbar-links {
+    display: none;
+    width: 100%; }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column; }
+  .navbar-links ul li {
+    text-align: center; }
+  .navbar-links ul li a {
+    padding: .5rem 1rem; }
+  .navbar-links.active {
+    display: flex; } }
 
 /* Navbar end*/
 /* VIEW BOOK PAGE START*/
@@ -38,7 +81,7 @@ body {
   grid-template-columns: auto auto auto;
   padding: 10px;
   grid-gap: 30px;
-  margin-top: 100px;
+  padding-top: 100px;
   margin-left: 100px;
   margin-right: 100px; }
   .grid-container .grid-item {
@@ -107,7 +150,44 @@ body {
   color: black;
   cursor: pointer; }
 
-/* Book main page end*/
+/* VIEW BOOK PAGE END*/
+.bookEdit {
+  padding: 150px; }
+  .bookEdit input {
+    padding: 0.5rem;
+    margin: 0.5rem; }
+  .bookEdit label {
+    width: 180px;
+    clear: left;
+    text-align: right;
+    padding-right: 10px; }
+  .bookEdit input, .bookEdit label {
+    float: left; }
+
+#form_save {
+  background-color: #00bfff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 50px; }
+
+.viewBook {
+  padding: 150px; }
+  .viewBook input {
+    padding: 0.5rem;
+    margin: 0.5rem; }
+  .viewBook label {
+    width: 180px;
+    clear: left;
+    text-align: right;
+    padding-right: 10px; }
+  .viewBook input, .viewBook label {
+    float: left; }
+
 /* LOGIN PAGE START*/
 .sign-in-btn {
   background-color: #00bfff;
@@ -123,7 +203,7 @@ body {
 .login-form {
   width: 30%;
   padding: 20px;
-  background: #FFFFFF;
+  background: #ffffff;
   margin: 40px auto;
   margin-top: 150px;
   text-align: center;
@@ -153,17 +233,6 @@ body {
       display: block; }
 
 /* LOGIN PAGE END*/
-/* VIEW BOOK PAGE END*/
-/* REGISTER USER START*/
-.register-user {
-  margin-top: 100px;
-  text-align: center; }
-  .register-user .register-user-form {
-    border: 1px solid black;
-    padding: 15px;
-    margin: auto;
-    width: 30%; }
-
 @media (max-width: 768px) {
   .login-form {
     width: 40%;
@@ -177,4 +246,8 @@ body {
     padding: 0px !important; }
   .login-form .login-form-field {
     padding: 0 !important;
-    margin: 0 !important; } }
+    margin: 0 !important;
+    width: 100%;
+    height: 50px; }
+  .login-form h2 {
+    margin: 0px; } }

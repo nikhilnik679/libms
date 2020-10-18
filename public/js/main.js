@@ -1,11 +1,9 @@
-function myFunction() {
-  const x = document.getElementById('topNav');
-  if (x.className === 'navbar') {
-    x.className += ' responsive';
-  } else {
-    x.className = 'navbar';
-  }
-}
+const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active');
+});
 
 // eslint-disable-next-line no-undef
 $(document).ready(() => {

@@ -10,5 +10,5 @@ gulp.task('css', async () => {
     .pipe(uglifycss({
       uglyComments: true,
     }))
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('public/dist/'));
 });

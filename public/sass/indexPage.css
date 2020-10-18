@@ -1,5 +1,12 @@
 @import url(main.css);
 @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+section {
+  padding-bottom: 4em;
+  padding-top: 4em; }
+
+#slider {
+  padding-top: 0; }
+
 .intro img {
   width: 100%;
   height: calc(80vh - 60px);
@@ -346,10 +353,6 @@ footer .small-footer {
 
 .logo-footer-block hr {
   display: none; }
-
-section {
-  padding-bottom: 4em;
-  padding-top: 4em; }
 
 section hr {
   margin-top: 20px;

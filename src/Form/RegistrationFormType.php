@@ -22,7 +22,6 @@ class RegistrationFormType extends AbstractType
         //  $user1 = 90;
         //  print_r( $user1);
         // die;
-       
         $builder
             ->add('firstName')
             ->add('lastName')
@@ -54,20 +53,6 @@ class RegistrationFormType extends AbstractType
                         'admin' => 'ROLE_ADMIN',
                     ]
                 ]);
-            // ->add('roles', ChoiceType::class, array(
-            //     'attr' => array(
-            //         'class' => 'form-control',
-            //     //  'value' => $options[0]['roles'],
-            //         'required' => false,
-            //     ),
-            //     'multiple' => true,
-            //     'expanded' => true, // render check-boxes
-            //     'choices' => [
-            //         'admin' => 'ROLE_ADMIN',
-            //         'user' => 'ROLE_USER',
-            //     ]
-            // )
-            // );
     }
 
     public function configureOptions(OptionsResolver $resolver)

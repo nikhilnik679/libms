@@ -1,12 +1,14 @@
 @import 'main.css';
 @import url('https://use.fontawesome.com/releases/v5.13.0/css/all.css');
+section {
+  padding-bottom: 4em;
+  padding-top: 4em;
+}
 
+#slider{
+  padding-top: 0;
+}
 .intro {
-  //background-color: aqua;
-  // height: 250px;
-  // width: 98%;
-  // border: 1px solid black;
-  // margin-top: 25px;
   img {
     width: 100%;
     height: calc(80vh - 60px);
@@ -65,8 +67,6 @@
   i {
     font-size: 35px !important;
     color: navy;
-  //  color: linear-gradient(30deg, #000046 0, #1CB5E0 100%);
-  //  background: transparent;
   }
 
   h3 {
@@ -149,8 +149,6 @@
     background-position-x: 100%;
     background-position-y: 0;
     background-size: 200% 200%;
-    // background-repeat-x: initial;
-    // background-repeat-y: initial;
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
@@ -467,11 +465,6 @@ footer {
   }
 }
 
-section {
-  padding-bottom: 4em;
-  padding-top: 4em;
-}
-
 section hr{
     margin-top: 20px;
     margin-bottom: 30px;
@@ -493,8 +486,6 @@ section hr{
   background-position-x: 100%;
   background-position-y: 0;
   background-size: 200% 200%;
-  // background-repeat-x: initial;
-  // background-repeat-y: initial;
   background-attachment: initial;
   background-origin: initial;
   background-clip: initial;

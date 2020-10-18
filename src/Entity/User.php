@@ -106,7 +106,6 @@ class User implements UserInterface
     {
         $roles[] = $this->roles;
  
-
         if(in_array('ROLE_USER', $roles) === false){
             $roles[] = 'ROLE_USER';
         }

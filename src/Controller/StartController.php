@@ -7,14 +7,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class StartController extends AbstractController
 {
-
     /**
      * @Route("/index", name="homepage")
      */
     public function index()
     {
-
         return $this->render('index.html.twig');
-
     }
 }
